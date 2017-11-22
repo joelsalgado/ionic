@@ -1,0 +1,188 @@
+<!--
+  Generated template for the FormAddPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Agregar Solicitante</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+	<ion-card>
+		<ion-card-header>
+			Datos Personales del(la) Solicitante
+		</ion-card-header>
+		<ion-card-content>
+			<ion-grid>
+			 	<ion-row>
+			    	<ion-col col-12 col-sm-4 col-md-4>
+			 			<ion-item>
+							<ion-label floating>Apellido Paterno</ion-label>
+							<ion-input type="text" [(ngModel)]="model.name"></ion-input>
+						</ion-item>
+			    	</ion-col>
+			    	<ion-col col-12 col-sm-4 col-md-4>
+			      		<ion-item>
+							<ion-label floating>Apellido Materno</ion-label>
+							<ion-input type="text" [(ngModel)]="model.last_name"></ion-input>
+						</ion-item>
+			    	</ion-col>
+			    	<ion-col col-12 col-sm-4 col-md-4>
+			      		<ion-item>
+							<ion-label floating>Nombre</ion-label>
+							<ion-input type="text" [(ngModel)]="model.last_name2"></ion-input>
+						</ion-item>
+					</ion-col>
+					<ion-col col-12 col-sm-4 col-md-4>
+			      		<ion-item>
+						    <ion-label>Municipio</ion-label>
+						    <ion-select [(ngModel)]="model.title" cancelText="Cancelar" okText="Aceptar">
+						      	<ion-option value="ACAMBAY">ACAMBAY</ion-option>
+								<ion-option value="ACOLMAN">ACOLMAN</ion-option>
+								<ion-option value="ACULCO">ACULCO</ion-option>
+								<ion-option value="ALMOLOYA DE ALQUISIRAS">ALMOLOYA DE ALQUISIRAS</ion-option>
+								<ion-option value="ALMOLOYA DE JUAREZ">ALMOLOYA DE JUAREZ</ion-option>
+								<ion-option value="ALMOLOYA DEL RIO">ALMOLOYA DEL RIO</ion-option>
+								<ion-option value="AMANALCO">AMANALCO</ion-option>
+								<ion-option value="AMATEPEC">AMATEPEC</ion-option>
+								<ion-option value="AMECAMECA">AMECAMECA</ion-option>
+								<ion-option value="APAXCO">APAXCO</ion-option>
+								<ion-option value="ATENCO">ATENCO</ion-option>
+								<ion-option value="ATIZAPAN">ATIZAPAN</ion-option>
+								<ion-option value="ATIZAPAN DE ZARAGOZA">ATIZAPAN DE ZARAGOZA</ion-option>
+								<ion-option value="ATLACOMULCO">ATLACOMULCO</ion-option>
+								<ion-option value="ATLAUTLA">ATLAUTLA</ion-option>
+								<ion-option value="AXAPUSCO">AXAPUSCO</ion-option>
+								<ion-option value="AYAPANGO">AYAPANGO</ion-option>
+								<ion-option value="CALIMAYA">CALIMAYA</ion-option>
+								<ion-option value="CAPULHUAC">CAPULHUAC</ion-option>
+								<ion-option value="CHALCO">CHALCO</ion-option>
+								<ion-option value="CHAPA DE MOTA">CHAPA DE MOTA</ion-option>
+								<ion-option value="CHAPULTEPEC">CHAPULTEPEC</ion-option>
+								<ion-option value="CHIAUTLA">CHIAUTLA</ion-option>
+								<ion-option value="CHICOLOAPAN">CHICOLOAPAN</ion-option>
+								<ion-option value="CHICONCUAC">CHICONCUAC</ion-option>
+								<ion-option value="CHIMALHUACAN">CHIMALHUACAN</ion-option>
+								<ion-option value="COACALCO DE BERRIOZABAL">COACALCO DE BERRIOZABAL</ion-option>
+								<ion-option value="COATEPEC HARINAS">COATEPEC HARINAS</ion-option>
+								<ion-option value="COCOTITLAN">COCOTITLAN</ion-option>
+								<ion-option value="COYOTEPEC">COYOTEPEC</ion-option>
+								<ion-option value="CUAUTITLAN">CUAUTITLAN</ion-option>
+								<ion-option value="CUAUTITLAN IZCALLI">CUAUTITLAN IZCALLI</ion-option>
+								<ion-option value="DONATO GUERRA">DONATO GUERRA</ion-option>
+								<ion-option value="ECATEPEC DE MORELOS">ECATEPEC DE MORELOS</ion-option>
+								<ion-option value="ECATZINGO">ECATZINGO</ion-option>
+								<ion-option value="EL ORO">EL ORO</ion-option>
+								<ion-option value="HUEHUETOCA">HUEHUETOCA</ion-option>
+								<ion-option value="HUEYPOXTLA">HUEYPOXTLA</ion-option>
+								<ion-option value="HUIXQUILUCAN">HUIXQUILUCAN</ion-option>
+								<ion-option value="ISIDRO FABELA">ISIDRO FABELA</ion-option>
+								<ion-option value="IXTAPALUCA">IXTAPALUCA</ion-option>
+								<ion-option value="IXTAPAN DE LA SAL">IXTAPAN DE LA SAL</ion-option>
+								<ion-option value="IXTAPAN DEL ORO">IXTAPAN DEL ORO</ion-option>
+								<ion-option value="IXTLAHUACA">IXTLAHUACA</ion-option>
+								<ion-option value="JALTENCO">JALTENCO</ion-option>
+								<ion-option value="JILOTEPEC">JILOTEPEC</ion-option>
+								<ion-option value="JILOTZINGO">JILOTZINGO</ion-option>
+								<ion-option value="JIQUIPILCO">JIQUIPILCO</ion-option>
+								<ion-option value="JOCOTITLAN">JOCOTITLAN</ion-option>
+								<ion-option value="JOQUICINGO">JOQUICINGO</ion-option>
+								<ion-option value="JUCHITEPEC">JUCHITEPEC</ion-option>
+								<ion-option value="LA PAZ">LA PAZ</ion-option>
+								<ion-option value="LERMA">LERMA</ion-option>
+								<ion-option value="LUVIANOS">LUVIANOS</ion-option>
+								<ion-option value="MALINALCO">MALINALCO</ion-option>
+								<ion-option value="MELCHOR OCAMPO">MELCHOR OCAMPO</ion-option>
+								<ion-option value="METEPEC">METEPEC</ion-option>
+								<ion-option value="MEXICALTZINGO">MEXICALTZINGO</ion-option>
+								<ion-option value="MORELOS">MORELOS</ion-option>
+								<ion-option value="NAUCALPAN DE JUAREZ">NAUCALPAN DE JUAREZ</ion-option>
+								<ion-option value="NEXTLALPAN">NEXTLALPAN</ion-option>
+								<ion-option value="NEZAHUALCOYOTL">NEZAHUALCOYOTL</ion-option>
+								<ion-option value="NICOLAS ROMERO">NICOLAS ROMERO</ion-option>
+								<ion-option value="NOPALTEPEC">NOPALTEPEC</ion-option>
+								<ion-option value="OCOYOACAC">OCOYOACAC</ion-option>
+								<ion-option value="OCUILAN">OCUILAN</ion-option>
+								<ion-option value="OTUMBA">OTUMBA</ion-option>
+								<ion-option value="OTZOLOAPAN">OTZOLOAPAN</ion-option>
+								<ion-option value="OTZOLOTEPEC">OTZOLOTEPEC</ion-option>
+								<ion-option value="OZUMBA">OZUMBA</ion-option>
+								<ion-option value="PAPALOTLA">PAPALOTLA</ion-option>
+								<ion-option value="POLOTITLAN">POLOTITLAN</ion-option>
+								<ion-option value="RAYON">RAYON</ion-option>
+								<ion-option value="SAN ANTONIO LA ISLA">SAN ANTONIO LA ISLA</ion-option>
+								<ion-option value="SAN FELIPE DEL PROGRESO">SAN FELIPE DEL PROGRESO</ion-option>
+								<ion-option value="SAN JOSE DEL RINCON">SAN JOSE DEL RINCON</ion-option>
+								<ion-option value="SAN MARTIN DE LAS PIRAMIDES">SAN MARTIN DE LAS PIRAMIDES</ion-option>
+								<ion-option value="SAN MATEO ATENCO">SAN MATEO ATENCO</ion-option>
+								<ion-option value="SAN SIMON DE GUERRERO">SAN SIMON DE GUERRERO</ion-option>
+								<ion-option value="SANTO TOMAS">SANTO TOMAS</ion-option>
+								<ion-option value="SIN MUNICIPIO">SIN MUNICIPIO</ion-option>
+								<ion-option value="SOYANIQUILPAN DE JUAREZ">SOYANIQUILPAN DE JUAREZ</ion-option>
+								<ion-option value="SULTEPEC">SULTEPEC</ion-option>
+								<ion-option value="TECAMAC">TECAMAC</ion-option>
+								<ion-option value="TEJUPILCO">TEJUPILCO</ion-option>
+								<ion-option value="TEMAMATLA">TEMAMATLA</ion-option>
+								<ion-option value="TEMASCALAPA">TEMASCALAPA</ion-option>
+								<ion-option value="TEMASCALCINGO">TEMASCALCINGO</ion-option>
+								<ion-option value="TEMASCALTEPEC">TEMASCALTEPEC</ion-option>
+								<ion-option value="TEMOAYA">TEMOAYA</ion-option>
+								<ion-option value="TENANCINGO">TENANCINGO</ion-option>
+								<ion-option value="TENANGO DEL AIRE">TENANGO DEL AIRE</ion-option>
+								<ion-option value="TENANGO DEL VALLE">TENANGO DEL VALLE</ion-option>
+								<ion-option value="TEOLOYUCAN">TEOLOYUCAN</ion-option>
+								<ion-option value="TEOTIHUACAN">TEOTIHUACAN</ion-option>
+								<ion-option value="TEPETLAOXTOC">TEPETLAOXTOC</ion-option>
+								<ion-option value="TEPETLIXPA">TEPETLIXPA</ion-option>
+								<ion-option value="TEPOTZOTLAN">TEPOTZOTLAN</ion-option>
+								<ion-option value="TEQUIXQUIAC">TEQUIXQUIAC</ion-option>
+								<ion-option value="TEXCALTITLAN">TEXCALTITLAN</ion-option>
+								<ion-option value="TEXCALYACAC">TEXCALYACAC</ion-option>
+								<ion-option value="TEXCOCO">TEXCOCO</ion-option>
+								<ion-option value="TEZOYUCA">TEZOYUCA</ion-option>
+								<ion-option value="TIANGUISTENCO">TIANGUISTENCO</ion-option>
+								<ion-option value="TIMILPAN">TIMILPAN</ion-option>
+								<ion-option value="TLALMANALCO">TLALMANALCO</ion-option>
+								<ion-option value="TLALNEPANTLA DE BAZ">TLALNEPANTLA DE BAZ</ion-option>
+								<ion-option value="TLATLAYA">TLATLAYA</ion-option>
+								<ion-option value="TOLUCA">TOLUCA</ion-option>
+								<ion-option value="TONANITLA">TONANITLA</ion-option>
+								<ion-option value="TONATICO">TONATICO</ion-option>
+								<ion-option value="TULTEPEC">TULTEPEC</ion-option>
+								<ion-option value="TULTITLAN">TULTITLAN</ion-option>
+								<ion-option value="VALLE DE BRAVO">VALLE DE BRAVO</ion-option>
+								<ion-option value="VALLE DE CHALCO SOLIDARIDAD">VALLE DE CHALCO SOLIDARIDAD</ion-option>
+								<ion-option value="VILLA DE ALLENDE">VILLA DE ALLENDE</ion-option>
+								<ion-option value="VILLA DEL CARBON">VILLA DEL CARBON</ion-option>
+								<ion-option value="VILLA GUERRERO">VILLA GUERRERO</ion-option>
+								<ion-option value="VILLA VICTORIA">VILLA VICTORIA</ion-option>
+								<ion-option value="XALATLACO">XALATLACO</ion-option>
+								<ion-option value="XONACATLAN">XONACATLAN</ion-option>
+								<ion-option value="ZACAZONAPAN">ZACAZONAPAN</ion-option>
+								<ion-option value="ZACUALPAN">ZACUALPAN</ion-option>
+								<ion-option value="ZINACANTEPEC">ZINACANTEPEC</ion-option>
+								<ion-option value="ZUMPAHUACAN">ZUMPAHUACAN</ion-option>
+								<ion-option value="ZUMPANGO">ZUMPANGO</ion-option>
+						    </ion-select>
+						  </ion-item>
+					</ion-col>
+					<ion-col col-12 col-sm-4 col-md-4>
+			      		<ion-item>
+							<ion-label floating>CURP</ion-label>
+							<ion-input type="text" [(ngModel)]="model.curp"></ion-input>
+						</ion-item>
+					</ion-col>
+				</ion-row>
+			</ion-grid>
+		</ion-card-content>
+	</ion-card>
+	<div class="actions">
+		<button ion-button (click)="save()">Enviar</button>
+	</div>
+</ion-content>

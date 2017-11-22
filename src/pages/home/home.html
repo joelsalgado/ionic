@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title> 
+      {{ title }}
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+<ion-card>
+	<ion-card-header>Solicitantes</ion-card-header>
+	<ion-list *ngFor="let user of users">
+		<button ion-item>
+			<strong>
+				{{user.name}} {{user.last_name}} {{user.last_name2}} 
+			</strong>
+				
+		</button>
+	</ion-list>
+</ion-card>
+
+<ion-fab>
+	<button ion-fab [navPush]="formPage">+</button>
+</ion-fab>
+
+</ion-content>
