@@ -5,6 +5,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 import { Geolocation } from '@ionic-native/geolocation';
 import { NativeGeocoder } from '@ionic-native/native-geocoder';
+import { Camera } from '@ionic-native/camera';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
@@ -31,6 +32,7 @@ import { FormAddPage } from '../pages/form-add/form-add';
     SplashScreen,
     Geolocation,
     NativeGeocoder,
+    Camera,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })

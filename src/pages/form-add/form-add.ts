@@ -43,9 +43,9 @@ export class FormAddPage {
       this.shouldSend = false;
       this.geolocation.getCurrentPosition().then(result=>{
         this.model.setCoords(result.coords);
-        this.shouldSend = true;
         //console.log(result);
-        //this.location (result.coords.latitude, result.coords.longitude);
+        this.location (result.coords.latitude, result.coords.longitude);
+        this.shouldSend = true;
       }).catch((err) => console.log(err));
     }
     else{
@@ -72,10 +72,19 @@ export class FormAddPage {
   location(lat,long){
     //console.log(lat+ " si " + long);
     this.nativeGeocoder.reverseGeocode(lat, long)
-      .then((result: NativeGeocoderReverseResult) =>
+      .then((result: NativeGeocoderReverseResult) =>{
         //console.log(result.locality))
-        this.model.setUrl(result))
-      .catch((error: any) => console.log(error));
+        //console.log("hola");
+        //let loc2: string = result.locality +" " + result.subLocality + " " + result.thoroughfare + " " + result.subThoroughfare;
+
+        this.model.locality = result.locality;
+        this.model.subLocality = result.subLocality;
+        this.model.thoroughfare = result.thoroughfare;
+        this.model.subThoroughfare = result.subThoroughfare;
+      }).catch((error: any) =>{
+        console.log(error);
+        console.log("error");
+      });
   }
 
 }
