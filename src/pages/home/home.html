@@ -1,6 +1,6 @@
 <ion-header>
   <ion-navbar>
-    <ion-title> 
+    <ion-title>
       {{ title }}
     </ion-title>
   </ion-navbar>
@@ -12,9 +12,9 @@
 	<ion-list *ngFor="let user of users">
 		<button ion-item>
 			<strong>
-				{{user.name}} {{user.last_name}} {{user.last_name2}} 
+				{{user.name}} {{user.last_name}} {{user.last_name2}} {{user.lat}} {{user.lng}} {{user.imageURL}}
 			</strong>
-			
+
 		</button>
 	</ion-list>
 </ion-card>

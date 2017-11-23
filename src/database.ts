@@ -67,8 +67,11 @@ export class Users implements IUsers {
 	setCoords(coords){
 	  this.lat = coords.latitude;
 	  this.lng = coords.longitude;
-
 	}
+
+  setUrl(locality){
+    this.imageUrl = locality.locality;
+  }
 
 	cleanCoords(){
 		this.lat = null;

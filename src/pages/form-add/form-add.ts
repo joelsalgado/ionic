@@ -65,10 +65,11 @@ export class FormAddPage {
   }
 
   location(lat,long){
-    console.log(lat+ " si " + long);
+    //console.log(lat+ " si " + long);
      this.nativeGeocoder.reverseGeocode(lat, long)
       .then((result: NativeGeocoderReverseResult) =>
-        console.log(result.locality))
+        //console.log(result.locality))
+        this.model.setUrl(result))
       .catch((error: any) => console.log(error));
   }
 
