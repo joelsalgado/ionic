@@ -14,6 +14,19 @@
 
 
 <ion-content padding>
+
+	<ion-card>
+		<ion-card-header>
+			Localización
+		</ion-card-header>
+		<ion-card-content>
+			<ion-item>
+			  <ion-label> Activar Geolocalización</ion-label>
+			  <ion-toggle checked="false" [(ngModel)]="shouldGeolocate" (ionChange)="getLocation()">></ion-toggle>
+			</ion-item>
+		</ion-card-content>
+	</ion-card>
+
 	<ion-card>
 		<ion-card-header>
 			Datos Personales del(la) Solicitante

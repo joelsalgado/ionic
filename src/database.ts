@@ -26,7 +26,7 @@ export interface IUsers{
 }
 
 export class Users implements IUsers {
-	
+
 	id?: number;
 	name: string;
 	last_name: string;
@@ -38,10 +38,10 @@ export class Users implements IUsers {
 	imageUrl: string;
 
 	constructor(
-		name: string, 
-		last_name: string, 
+		name: string,
+		last_name: string,
 		last_name2: string,
-		title: string, 
+		title: string,
 		curp: string,
 		lat?: number,
 		lng?: number,
@@ -62,6 +62,17 @@ export class Users implements IUsers {
 
 	save(){
 		return db.users.add(this);
+	}
+
+	setCoords(coords){
+	  this.lat = coords.latitude;
+	  this.lng = coords.longitude;
+
+	}
+
+	cleanCoords(){
+		this.lat = null;
+    this.lng = null;
 	}
 
 	static all(){
