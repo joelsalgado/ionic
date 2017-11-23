@@ -69,13 +69,9 @@ export class Users implements IUsers {
 	  this.lng = coords.longitude;
 	}
 
-  setUrl(locality){
-    this.imageUrl = locality.locality;
-  }
-
 	cleanCoords(){
 		this.lat = null;
-    this.lng = null;
+    	this.lng = null;
 	}
 
 	static all(){

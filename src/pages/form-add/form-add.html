@@ -196,6 +196,6 @@
 		</ion-card-content>
 	</ion-card>
 	<div class="actions">
-		<button ion-button (click)="save()">Enviar</button>
+		<button ion-button (click)="save()" [disabled]="!shouldSend">Enviar</button>
 	</div>
 </ion-content>
