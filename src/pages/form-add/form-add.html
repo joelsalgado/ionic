@@ -193,6 +193,8 @@
 					</ion-col>
 				</ion-row>
 			</ion-grid>
+			<button ion-button block (click)="getPicture()">Toma una foto</button>
+  <img [src]="image" *ngIf="image" />
 		</ion-card-content>
 	</ion-card>
 	<div class="actions">

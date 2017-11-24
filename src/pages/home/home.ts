@@ -8,7 +8,7 @@ import {FormAddPage} from '../form-add/form-add';
   selector: 'page-home',
   templateUrl: 'home.html'
 })
-export class HomePage {	
+export class HomePage {
 
   title: string= "Salario Rosa";
   users: any;
@@ -28,7 +28,7 @@ export class HomePage {
   loadUsers(){
   	Users.all()
   			.then((resultados) => {
-  				this.users = resultados
+  				this.users = resultados;
   				console.log (this.users);
   			});
   }

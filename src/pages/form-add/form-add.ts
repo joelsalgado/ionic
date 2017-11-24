@@ -4,14 +4,7 @@ import { Users } from '../../database';
 import { AlertController } from 'ionic-angular';
 import { Geolocation, Geoposition } from '@ionic-native/geolocation';
 import { NativeGeocoder, NativeGeocoderReverseResult } from '@ionic-native/native-geocoder';
-
-/**
- * Generated class for the FormAddPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
-
+import { Camera, CameraOptions } from '@ionic-native/camera';
 
 @Component({
   selector: 'page-form-add',
@@ -22,12 +15,14 @@ export class FormAddPage {
   model: any;
   shouldGeolocate: boolean = false;
   shouldSend: boolean = true;
+  image: string = null;
 
   constructor(
     public navCtrl: NavController,
     public alertCtrl: AlertController,
     public geolocation: Geolocation,
     public nativeGeocoder: NativeGeocoder,
+    private camera: Camera
 
   ){
     this.model = Users;
@@ -43,7 +38,6 @@ export class FormAddPage {
       this.shouldSend = false;
       this.geolocation.getCurrentPosition().then(result=>{
         this.model.setCoords(result.coords);
-        //console.log(result);
         this.location (result.coords.latitude, result.coords.longitude);
         this.shouldSend = true;
       }).catch((err) => console.log(err));
@@ -70,21 +64,32 @@ export class FormAddPage {
   }
 
   location(lat,long){
-    //console.log(lat+ " si " + long);
     this.nativeGeocoder.reverseGeocode(lat, long)
       .then((result: NativeGeocoderReverseResult) =>{
-        //console.log(result.locality))
-        //console.log("hola");
-        //let loc2: string = result.locality +" " + result.subLocality + " " + result.thoroughfare + " " + result.subThoroughfare;
-
         this.model.locality = result.locality;
         this.model.subLocality = result.subLocality;
         this.model.thoroughfare = result.thoroughfare;
         this.model.subThoroughfare = result.subThoroughfare;
       }).catch((error: any) =>{
         console.log(error);
-        console.log("error");
       });
   }
+
+  getPicture(){
+    let options: CameraOptions = {
+      destinationType: this.camera.DestinationType.DATA_URL,
+      targetWidth: 100,
+      targetHeight: 100,
+      quality: 40
+    }
+    this.camera.getPicture( options )
+      .then(imageData => {
+        this.image = 'data:image/jpeg;base64,'+imageData;
+        this.model.imageUrl = this.image;
+      })
+      .catch(error =>{
+        console.error( error );
+      });
+    }
 
 }
