@@ -82,10 +82,10 @@ export class Users implements IUsers {
     if(lng) this.lng = lng;
     if(id) this.id = id;
     if (imageUrl) this.imageUrl = imageUrl;
-    if (locality) this.imageUrl = imageUrl;
-    if (subLocality) this.imageUrl = imageUrl;
-    if (thoroughfare) this.imageUrl = imageUrl;
-    if (subThoroughfare) this.imageUrl = imageUrl;
+    if (locality) this.locality = locality;
+    if (subLocality) this.subLocality = subLocality;
+    if (thoroughfare) this.thoroughfare = thoroughfare;
+    if (subThoroughfare) this.subThoroughfare = subThoroughfare;
   }
 
   save(){
